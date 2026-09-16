@@ -18,3 +18,5 @@ Open `index.html` directly in a browser.
 
 ## WhatsApp CTA
 - Floating **Get Started** button opens WhatsApp for `9999999999` with the prefilled message `Hi`.
+
+- Mobile viewport safeguards prevent oversized content from triggering an initially magnified layout.

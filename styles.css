@@ -113,3 +113,53 @@ footer{display:flex;justify-content:space-between;padding:25px 6vw;color:#6e7d8b
   }
   .hero-visual{padding-top:116px}
 }
+
+
+/* Final mobile viewport / no-initial-zoom safeguards */
+html, body{
+  width:100%;
+  max-width:100%;
+  margin:0;
+  -webkit-text-size-adjust:100%;
+  text-size-adjust:100%;
+}
+@media(max-width:760px){
+  html{overflow-x:hidden;}
+  body{overflow-x:hidden; width:100%; max-width:100vw;}
+  .site-header{
+    width:100%;
+    max-width:100vw;
+    min-width:0;
+    box-sizing:border-box;
+  }
+  .site-header .brand{min-width:0; flex-shrink:1;}
+  .site-header .brand span:last-child{min-width:0;}
+  .header-actions{flex-shrink:0;}
+  .header-actions .ghost-btn,.header-actions .gold-btn.small{
+    flex:0 0 auto;
+    white-space:nowrap;
+  }
+  .hero,.hero-copy,.hero-visual,.sports-section,.matches-section,footer{
+    width:100%;
+    max-width:100vw;
+    min-width:0;
+  }
+  .hero{box-sizing:border-box;}
+  .hero-visual{
+    overflow:hidden;
+  }
+  .sport-collage{
+    max-width:none;
+    pointer-events:none;
+  }
+}
+@media(max-width:360px){
+  .site-header{padding-left:7px; padding-right:7px;}
+  .site-header .brand-mark{font-size:21px;}
+  .site-header .brand strong{font-size:10px;}
+  .site-header .brand small{font-size:5px; letter-spacing:2px;}
+  .header-actions{gap:4px;}
+  .header-actions .ghost-btn,.header-actions .gold-btn.small{
+    height:32px; min-width:0; padding:0 7px; font-size:8.5px;
+  }
+}
